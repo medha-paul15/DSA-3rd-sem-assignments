@@ -44,7 +44,7 @@ int main() {
         } 
         else if (exp[i] == ')') {
             if (s.isEmpty() || s.pop() != '(') {
-                f = 0;
+                f = 0; //if the element before ')' is not an opening '(' or an operand 
                 break;
             }
         } 
