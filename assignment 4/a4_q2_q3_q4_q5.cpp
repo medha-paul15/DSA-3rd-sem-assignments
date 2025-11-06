@@ -101,7 +101,7 @@ void firstnonrepeating(char str[])
         //non repeating character
         while (!q.isEmpty()) {
             if (charCount[q.peek() - 'a'] > 1)
-                q.dequeue();
+                q.dequeue(); //if not distinct, then remove from queue
             else {
                 cout << (char)q.peek() << " ";
                 break;
@@ -143,6 +143,7 @@ Queue interleavefunc(Queue &A){
 }
 
 class mystack{
+        //two queues 
     Queue q1,q2;
     public:
         void push(int x){
@@ -179,7 +180,7 @@ class yourstack{
         void push(int x){ //x=4
             qu.enqueue(x); // 1 2 3 [4]
             for(int i=0;i<qu.size()-1;i++){ 
-                qu.enqueue(qu.peek()); 
+                qu.enqueue(qu.peek()); //rotates
                 qu.dequeue(); // [4] 1 2 3
             }
         }
