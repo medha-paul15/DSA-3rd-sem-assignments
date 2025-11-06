@@ -6,7 +6,7 @@ void missingnumlinear();
 void missingnumbinary();
 void bubbleSort();
 void stringprobs();
-void countDistinct();
+
 
 
 int main(){
@@ -24,8 +24,7 @@ int main(){
     //q4. 
     stringprobs();
 
-    //q8. 
-    countDistinct();
+
 
     return 0;
 }
@@ -141,21 +140,3 @@ void stringprobs(){
     cout << "Lowercase: " << char(tolower(ch))<<endl;
 }
 
-void countDistinct() {
-    int arr[]={2,2,3,3,3,4,5,6,7,8,9,9};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    int count = 0;
-    for (int i = 0; i < n; i++) {
-        bool found = false;
-        // Check if arr[i] appeared before
-        for (int j = 0; j < i; j++) {
-            if (arr[j] == arr[i]) {
-                found = true;
-                break;
-            }
-        }
-        if (!found)
-            count++;
-    }
-    cout<<"the number of distinct elements is: "<< count;
-}
