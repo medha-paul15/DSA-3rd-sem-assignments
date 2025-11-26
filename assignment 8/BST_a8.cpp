@@ -134,7 +134,7 @@ treenode *inorder_successor(treenode*root, int key){
     return successor;
 }
 treenode *inorder_predecessor(treenode*root, int key){
-    //largest node in left subtree 
+    //smallest node in right subtree 
     cout<<endl;
     treenode*p=searchinBST(root,key);
     treenode* predecessor=NULL;
